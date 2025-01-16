@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facultate Recomandată</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h2>Facultăți Recomandate:</h2>
+    <ul>
+        {% for f in facultate %}
+            <li>{{ f }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/" class="btn">Înapoi la login</a>
+</body>
+</html>

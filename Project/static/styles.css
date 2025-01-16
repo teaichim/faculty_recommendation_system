@@ -1,0 +1,69 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0f7fa; /* Fundal deschis, albastru deschis */
+    color: #333; /* Culoarea textului */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrează conținutul orizontal */
+}
+
+h2 {
+    color: #0277bd; /* O nuanță mai închisă de albastru pentru titluri */
+}
+
+form {
+    background-color: #ffffff; /* Fundal alb pentru formular */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    width: 300px; /* Lățimea formularului */
+    text-align: center; /* Centrează textul din formular */
+}
+
+label, input {
+    display: block;
+    margin: 10px 0;
+    width: 93%; /* Lățimea completă a input-urilor */
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 10px;
+    border: 1px solid #0277bd; /* Contur albastru */
+    border-radius: 4px; /* Colțuri rotunjite */
+}
+
+button, .btn {
+    background-color: #0277bd; /* Fundal buton albastru */
+    color: white; /* Culoare text buton */
+    border: none;
+    padding: 10px 20px; /* Padding pe verticală și orizontală */
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    text-decoration: none; /* Elimină sublinierea */
+    display: inline-block; /* Permite marginile și padding-ul */
+    transition: background-color 0.3s ease; /* Tranziție pentru hover */
+}
+
+button:hover, .btn:hover {
+    background-color: #005c8a; /* Nuanta mai inchisa la hover */
+}
+
+ul {
+    list-style-type: none; /* Elimină marcările listei */
+    padding: 0;
+}
+
+ul li {
+    background-color: #ffffff; /* Fundal alb pentru fiecare opțiune */
+    border: 1px solid #0277bd; /* Contur albastru */
+    border-radius: 4px; /* Colțuri rotunjite */
+    padding: 10px;
+    margin: 5px 0; /* Marginea verticală între liste */
+    width: 300px; /* Lățimea listei */
+    text-align: center; /* Centrează textul din listă */
+}
