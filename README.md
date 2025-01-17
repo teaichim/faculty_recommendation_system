@@ -25,7 +25,6 @@ These reference values are not extracted from real data but were created manuall
 
 The database schema was implemented on Azure using four interconnected tables: persoana, adresa, rezultate_bac, and facultate. The persoana table stores candidate-specific details such as their unique code, gender, and specialization and is linked to rezultate_bac via cod_candidat and to adresa via the siiir field. The adresa table contains address data for high schools, with a connection to persoana through the siiir field. The rezultate_bac table records detailed BAC results and links to persoana using the cod_candidat field as a foreign key. Finally, the facultate table holds information about universities and admission requirements, with a relationship to rezultate_bac through the materii_bac field, aligning BAC subjects with faculty criteria. These relationships ensured data integrity and supported seamless integration into the recommendation system.
 
-![Logical schema]([URL_imagine](https://github.com/teaichim/faculty_recommendation_system/blob/main/schema_baza_date.png))
 
 ## Machine Learning Integration
 
