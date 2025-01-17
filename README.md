@@ -21,3 +21,16 @@ For the purpose of the recommendation system, we generated reference codes and a
 
 These reference values are not extracted from real data but were created manually to provide a framework for testing and implementing the recommendation system.
 
+## Integration with Microsoft Azure
+
+The database schema was implemented on Azure using four interconnected tables: persoana, adresa, rezultate_bac, and facultate. The persoana table stores candidate-specific details such as their unique code, gender, and specialization and is linked to rezultate_bac via cod_candidat and to adresa via the siiir field. The adresa table contains address data for high schools, with a connection to persoana through the siiir field. The rezultate_bac table records detailed BAC results and links to persoana using the cod_candidat field as a foreign key. Finally, the facultate table holds information about universities and admission requirements, with a relationship to rezultate_bac through the materii_bac field, aligning BAC subjects with faculty criteria. These relationships ensured data integrity and supported seamless integration into the recommendation system.
+
+![Logical schema]([URL_imagine](https://github.com/teaichim/faculty_recommendation_system/blob/main/schema_baza_date.png))
+
+## Machine Learning Integration
+
+The machine learning component of the recommendation system efficiently combines relational databases and Python-based algorithms to provide accurate faculty recommendations. By extracting and merging data from multiple tables (facultate, rezultate_bac, persoana, and adresa), the system processes student profiles, including BAC subjects, grades, and geographic information. A mapping function (faculty_subject_map) aligns student data with faculty requirements, calculating a threshold-based match ratio to prioritize the most relevant recommendations. The results are evaluated for accuracy, achieving a success rate of 66.16%, and are stored in the Azure SQL Database for further analysis. This modular and structured approach highlights the integration of database management and machine learning techniques to deliver a practical solution for educational guidance.
+
+## Web Application
+
+The web application was developed using Flask, a lightweight Python framework, to manage user authentication and facilitate interaction with the Microsoft SQL Server database via the pymssql library. Users log in using their unique codes and high school identifiers, allowing the system to query the database and execute the recommendation algorithm. Flask’s simplicity and modularity made it ideal for building a scalable and efficient platform, while pymssql provided seamless integration with the SQL Server for real-time data retrieval. Future enhancements could include advanced user interfaces and integration with Big Data technologies to improve scalability and functionality.
